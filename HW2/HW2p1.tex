@@ -1,0 +1,22 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{amsmath, amssymb, graphicx, fullpage, paralist, algorithmic}
+\begin{document}
+
+\begin{enumerate}
+\item {\bf Problem 1: The Closet Mayhem Problem}
+
+\begin{compactenum}[(A)]
+\item The graph $G$ can be described as a directed graph with vertices $V$ where $v_i \in V$ is the $i$th handhold. $\{v, w\}$ where $v,w \in V$ is defined as a directional edge from $v$ to $w$ if and only if there is a path from the handholds corresponding to $v$ and $w$. 
+\newline
+\newline
+We identified the goal of the problem to be to find the longest path in the DAG, therefore we are going to use the solution to Homework 1 Problem 2 Part D. To summarize though, first make the end position a sink by adding edges from any other sinks to the ending node making graph $G'$. Perform a Topological Sort on the new graph $G'$ and create a list with count of nodes on the best path to the end from the current node. We then iterate through the list $n$ times, where $n$ is the number of nodes/handholds. Since we want to get the most points possible by going to as many nodes as possible. As a result the running time is $O(n+m)$.
+\newline
+\item Compute the meta-graph for the given graph which runs in $O(n + m)$ time. Let the weight of each node in the meta-graph correspond to the number of nodes in the cycle that the node represents. Then run the algorithm from Part A.
+\newline
+\end{compactenum}
+
+\end{enumerate}
+\end{document}  
+
+
+

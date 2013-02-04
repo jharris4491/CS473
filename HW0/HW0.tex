@@ -1,0 +1,22 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{amsmath, amssymb, graphicx, fullpage, paralist, algorithmic}
+\begin{document}
+	{\noindent\bf Homework 1}\newline
+	{\bf Name:} Joshua Harris\newline
+	{\bf Netid:} jharri39 \newline
+	\hrule height 3pt \bigskip
+
+	\begin{enumerate}
+		\item {\bf Problem 1: The Closet Mayhem Problem}
+
+		\begin{compactenum}[(A)]
+			\item Base Case: Given we start with $n = 2$ coins in $k = 1$ piles. The first and only move we can make is to remove one coin and make two separate piles. Now with $k = 1$ piles and $n = 1$ coins the only move possible is to remove the last coin ending the game. \newline
+			The other base case is $n = 2$ coins and $k = 2$ piles. We the game terminates in this case because it is included in part of the first case.
+			\newline\newline
+			Suppose that for a game with $n > 2$ coins and $k$ piles that the game terminates in a finite amount of moves. Now given a game with $n + 1$ coins and $k$ piles such that $n + 1 \ge k > 0$.\newline
+			Case 1:The game is all in one pile so $k = 1$. We know the only move available to us at the moment is to make a new pile of 1 coin. Removing the coin we are left with a game consisting of $n$ coins which given by the Inductive Hypothesis is solvable in a finite number of turns.\newline
+			Case 2: The game has $k$ piles where $k > 1$ and the new coin is now added to one of the piles of the game. The coin can then be removed by placing it legally into its own pile and removing it from play. Again leaving us with a game of $n$ coins and thus ends in a finite number of turns. If the coin is alternately placed not in a pile with other coins then it must be on its own and thus can be removed as well.\newline
+			As a result all games can be solved in a finite number of turns.\newline
+		\end{compactenum}
+	\end{enumerate}
+\end{document}  
